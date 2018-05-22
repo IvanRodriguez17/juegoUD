@@ -1,7 +1,7 @@
 function Estudiante(){
   this.x = 310;
   this.y = 15;
-  this.img = [$("#abajo")[0],$("#arriba")[0],$("#salto")[0],$("#sentado")[0]];
+  this.img = [$("#abajo")[0],$("#arriba")[0]];
   this.sprite = 0;
   this.vida = 100;
   this.nota = 0;
@@ -14,7 +14,7 @@ function Estudiante(){
     ctx.save();
     ctx.fillStyle = "#ffffff";
     ctx.font = "12px sans-serif";
-    ctx.fillText("nota: "+ this.puntos, x, y + 65);
+    ctx.fillText("nota: "+ this.nota, x, y + 65);
     ctx.fillText("vida: "+ this.vida, x, y);
     if(this.sprite == 1) {
       ctx.fillStyle = "#ff0000";
@@ -40,12 +40,16 @@ function Estudiante(){
     this.x = (640 + this.x) % 640;
     this.y = (480 + this.y) % 480;
   }
+  this.colision = function(x,y) {
+	var distancia = Math.sqrt(Math.pow((x-this.x), 2) + Math.pow((y-this.y), 2));
+	
+		if(distancia > this.img[this.sprite].width)
+			return false;
+		else
+			return true;
+	  }
+	  
+ 
 }
 
-this.colision = function(x,y) {
-  var distancia = Math.sqrt(Math.pow((x-this.x), 2) + Math.pow(y-this.y), 2);
-  if(distancia > this.img[this.sprite].width)
-    return false;
-  else
-    return true;
-}
+
