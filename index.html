@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+		<meta charset="utf-8">
+		<meta name="dcterms.created" content="mar., 22 may. 2018 01:29:28 GMT">
+		<meta name="description" content="juego UD">
+		<meta name="keywords" content="juego con javaScript y HTML">
+		<meta name="author" content="Ivan Rodriguez">
+		<title>Juego de la UD</title>
+		<link rel="stylesheet" type="text/css" href="estilos/default.css" media="screen">
+		<script src="js/jquery-1.11.0.min.js" language="JavaScript1.2"></script>
+		<script src="js/jquery-1.11.0.js" language="JavaScript1.2"></script>
+		<script src="js/estudiante.js" language="JavaScript1.2"></script>
+		<script src="js/profesor.js" language="JavaScript1.2"></script>
+		<script src="js/script.js" language="JavaScript1.2"></script>
+	</head>
+	<body>
+		<section>
+			<canvas id="mi_canvas" width="640" height="480">
+			tu navegador no es compatible
+			</canvas>
+		</section>
+		<section>
+			<div id="popup" style="display: none;">
+				<div class="content-popup">
+					<div class="close"><a href="#" id="close"><img src="imagenes/close.png"/></a></div>
+					<div>
+						<h2>Teclas de juego</h2>
+						<img src="imagenes/teclado.png"/>
+						<h2>Creditos</h2>
+						<p>Iván Rodriguez Pineda</p>
+						<p>Modelos de programación 2</p>
+					</div>
+				</div>
+			</div>
+			<h1>Juego UD</h1>
+			<button id="instrucciones">Ver Instrucciones</button><br>
+			<button id="iniciar">Iniciar</button>
+		</section>
+		<audio id="pierde">
+			<source src="audios/doh.mp3" type="audio/mpeg">
+			<source src="audios/doh.ogg" tyoe="audio/ogg">
+			tu navegador no es compatible
+		</audio>
+		<img id="abajo" src="imagenes/estudiante.png"/>
+		<img id="arriba" src="imagenes/estudiante.png"/>
+		<img id="profesor_bueno" src="imagenes/profesor_bueno.png"/>
+		<img id="profesor_malo" src="imagenes/profesor_malo.png"/>
+	</body>
+</html>
